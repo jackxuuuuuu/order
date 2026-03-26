@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>gomoku</artifactId>
+    <groupId>com.cafeteria</groupId>
+    <artifactId>order-system</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Gomoku Game</name>
-    <description>五子棋游戏 - 两人对战版本</description>
+    <name>Cafeteria Order System</name>
+    <description>食堂点餐系统 - 简单点餐管理系统</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -35,7 +35,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.gomoku.Main</mainClass>
+                            <mainClass>com.cafeteria.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
