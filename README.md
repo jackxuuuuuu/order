@@ -51,8 +51,8 @@ order-system/
 
 ### 1. 克隆项目
 ```bash
-git clone https://github.com/jackxuuuuuu/gomoku.git
-cd gomoku
+git clone https://github.com/jackxuuuuuu/order.git
+cd order
 ```
 
 ### 2. 编译项目
