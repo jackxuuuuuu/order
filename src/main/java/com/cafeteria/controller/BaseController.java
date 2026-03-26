@@ -1,0 +1,79 @@
+package com.cafeteria.controller;
+
+/**
+ * 基础控制器类
+ * Base controller for REST APIs
+ *
+ * 注意：这是一个基础控制器示例类
+ * 实际应用中需要配合Spring框架使用
+ */
+public class BaseController {
+
+    /**
+     * 统一响应结果类
+     * Unified response result
+     */
+    public static class Result<T> {
+        private Integer code;
+        private String message;
+        private T data;
+
+        public Result() {
+        }
+
+        public Result(Integer code, String message, T data) {
+            this.code = code;
+            this.message = message;
+            this.data = data;
+        }
+
+        public static <T> Result<T> success(T data) {
+            return new Result<>(200, "success", data);
+        }
+
+        public static <T> Result<T> success(String message, T data) {
+            return new Result<>(200, message, data);
+        }
+
+        public static <T> Result<T> error(String message) {
+            return new Result<>(500, message, null);
+        }
+
+        public static <T> Result<T> error(Integer code, String message) {
+            return new Result<>(code, message, null);
+        }
+
+        public Integer getCode() {
+            return code;
+        }
+
+        public void setCode(Integer code) {
+            this.code = code;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
+
+        public T getData() {
+            return data;
+        }
+
+        public void setData(T data) {
+            this.data = data;
+        }
+
+        @Override
+        public String toString() {
+            return "Result{" +
+                    "code=" + code +
+                    ", message='" + message + '\'' +
+                    ", data=" + data +
+                    '}';
+        }
+    }
+}
